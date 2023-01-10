@@ -51,8 +51,7 @@ while (electrodomestico != 4) {
     default:
       alert("Elija una opcion valida");
       console.log("Elija una opcion valida");
-      continue;
-      
+      break;      
   }
 }
 
@@ -60,14 +59,20 @@ while (electrodomestico != 4) {
 function calculo(usuario, electrodomestico, dias, horas) {
   let consumoaa=20;
   let consumopv=4;
+  let consumotv=8;
   console.log("Tenemos todos los datos y estamos calculando");
   if (electrodomestico=="Aire Acondicionado"){
     let consumototal= consumoaa*horas*dias*4;
     alert("Consumo total: "+ consumototal+" Kw al mes");
     console.log(consumototal);
   }
-  else if (electrodomestico=="Pava Electrica"){
+  if (electrodomestico=="Pava Electrica"){
     let consumototal= consumopv*horas*dias*4;
+    alert("Consumo total: "+ consumototal+" Kw al mes");
+    console.log(consumototal);
+  }
+  else {
+    let consumototal= consumotv*horas*dias*4;
     alert("Consumo total: "+ consumototal+" Kw al mes");
     console.log(consumototal);
   }
